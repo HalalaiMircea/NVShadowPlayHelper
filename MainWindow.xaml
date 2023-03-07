@@ -1,0 +1,25 @@
+﻿<Window x:Class="NVShadowPlayHelper.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="600">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="50" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label Target="videoLocation">Videos: </Label>
+        <TextBox Name="videoLocation" IsReadOnly="true" Grid.Row="1" Grid.Column="0" />
+        <Button Name="videoChoose" Click="VideoChoose_OnClick" Grid.Row="1" Grid.Column="1" Margin="10,0,0,0">...</Button>
+
+        <Button Name="deleteEmpty" Click="DeleteEmpty_OnClick" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,100,0,0">Delete Empty Folders</Button>
+    </Grid>
+</Window>
